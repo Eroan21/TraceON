@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceON - Outdoor Adventure Game</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1A1A1A;
+            color: #F0F0F0;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #004D61;
+            border-bottom: 2px solid #822659;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #F0F0F0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            margin-left: 25px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #822659;
+        }
+
+        #langButton {
+            margin-left: 20px;
+            padding: 6px 12px;
+            border-radius: 25px;
+            border: none;
+            background-color: #3E5641;
+            color: #F0F0F0;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #langButton:hover {
+            background-color: #822659;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 80vh;
+            background: linear-gradient(135deg, #004D61, #3E5641);
+            border-radius: 0 0 50px 50px;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #F0F0F0;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            color: #F0F0F0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 30px;
+            background-color: #3E5641;
+            color: #F0F0F0;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #822659;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 80px 40px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h2.section-title {
+            color: #822659;
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-size: 1.1em;
+        }
+
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .feature {
+            background: linear-gradient(135deg, #004D61, #3E5641);
+            padding: 30px 25px;
+            border-radius: 30px;
+            width: 100%;
+            max-width: 700px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature h3 {
+            color: #F0F0F0;
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .feature p {
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+
+        footer {
+            background-color: #004D61;
+            text-align: center;
+            padding: 20px;
+            color: #F0F0F0;
+            border-top: 2px solid #822659;
+        }
+
+        @media(max-width: 768px) {
+            .hero h2 {
+                font-size: 2.2em;
+            }
+
+            .feature {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>TraceON</h1>
+        <nav>
+            <a href="#how-it-works">How it Works</a>
+            <a href="#features">Features</a>
+            <a href="#hero">Back to Top</a>
+            <button id="langButton">🇬🇧 English</button>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <h2>Adventure Awaits Outside</h2>
+        <p>TraceON transforms your city into a giant outdoor escape game. Solve stories, track clues, and scan QR codes
+            to progress your journey.</p>
+        <a class="btn" href="#how-it-works">Learn How</a>
+    </section>
+
+    <section id="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <p>TraceON turns your environment into a real-world detective hunt. Start a story online, follow clues outdoors,
+            scan QR codes to unlock the next steps, and solve mysteries solo or with friends.</p>
+    </section>
+
+    <section id="features">
+        <h2 class="section-title">Features</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Outdoor Adventure</h3>
+                <p>Engage with your surroundings while solving immersive stories. No screen-only gameplay.</p>
+            </div>
+            <div class="feature">
+                <h3>Solo or Team</h3>
+                <p>Play alone or collaborate with friends. Customize your adventure style.</p>
+            </div>
+            <div class="feature">
+                <h3>Immersive Stories</h3>
+                <p>Each game presents a unique narrative that unfolds as you progress through clues.</p>
+            </div>
+            <div class="feature">
+                <h3>QR Clues</h3>
+                <p>Scan real-world QR codes to unlock the next part of the story. Discover the city and the mystery
+                    simultaneously.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 TraceON. All rights reserved.
+    </footer>
+
+    <script>
+        const languages = ["en", "hu", "ro"];
+        let currentLangIndex = 0;
+
+        const texts = {
+            en: {
+                langButton: "🇬🇧 English",
+                heroTitle: "Adventure Awaits Outside",
+                heroText: "TraceON transforms your city into a giant outdoor escape game. Solve stories, track clues, and scan QR codes to progress your journey.",
+                btn: "Learn How",
+                howItWorksTitle: "How It Works",
+                howItWorksText: "TraceON turns your environment into a real-world detective hunt. Start a story online, follow clues outdoors, scan QR codes to unlock the next steps, and solve mysteries solo or with friends.",
+                featuresTitle: "Features",
+                features: [
+                    { title: "Outdoor Adventure", text: "Engage with your surroundings while solving immersive stories. No screen-only gameplay." },
+                    { title: "Solo or Team", text: "Play alone or collaborate with friends. Customize your adventure style." },
+                    { title: "Immersive Stories", text: "Each game presents a unique narrative that unfolds as you progress through clues." },
+                    { title: "QR Clues", text: "Scan real-world QR codes to unlock the next part of the story. Discover the city and the mystery simultaneously." }
+                ]
+            },
+            hu: {
+                langButton: "🇭🇺 Hungarian",
+                heroTitle: "Kaland Vár Kint",
+                heroText: "A TraceON a városodat óriási kültéri szabadulós játékká alakítja. Oldj meg történeteket, kövesd a nyomokat, és szkenneld a QR-kódokat a haladáshoz.",
+                btn: "Tudd meg hogyan",
+                howItWorksTitle: "Hogyan Működik",
+                howItWorksText: "A TraceON a környezetedet valós világ detektív küldetéssé változtatja. Indíts történetet online, kövesd a nyomokat kint, szkenneld a QR-kódokat a következő lépéshez, és oldd meg a rejtélyeket egyedül vagy barátaiddal.",
+                featuresTitle: "Jellemzők",
+                features: [
+                    { title: "Kültéri Kaland", text: "Lépj kapcsolatba a környezettel miközben lenyűgöző történeteket oldasz meg." },
+                    { title: "Egyedül vagy Csapatban", text: "Játssz egyedül vagy barátaiddal együtt. Testreszabhatod a kaland stílusát." },
+                    { title: "Lelkesítő Történetek", text: "Minden játék egyedi narratívát kínál, amely kibontakozik a nyomok követésével." },
+                    { title: "QR Nyomok", text: "Szkenneld a QR-kódokat a következő rész feloldásához. Fedezd fel a várost és a rejtélyt egyszerre." }
+                ]
+            },
+            ro: {
+                langButton: "🇷🇴 Romanian",
+                heroTitle: "Aventura Te Așteaptă Afară",
+                heroText: "TraceON transformă orașul tău într-un joc mare de tip escape outdoor. Rezolvă povești, urmează indicii și scanează coduri QR pentru a avansa.",
+                btn: "Află Cum",
+                howItWorksTitle: "Cum Funcționează",
+                howItWorksText: "TraceON transformă mediul înconjurător într-o vânătoare de detectivi în lumea reală. Pornește o poveste online, urmează indicii în aer liber, scanează coduri QR pentru următorii pași și rezolvă misterele singur sau cu prietenii.",
+                featuresTitle: "Caracteristici",
+                features: [
+                    { title: "Aventură În Aer Liber", text: "Interacționează cu împrejurimile în timp ce rezolvi povești captivante." },
+                    { title: "Singur sau în Echipă", text: "Joacă singur sau împreună cu prietenii. Personalizează stilul aventurii." },
+                    { title: "Povești Captivante", text: "Fiecare joc prezintă o narațiune unică care se desfășoară pe măsură ce urmezi indicii." },
+                    { title: "Indicii QR", text: "Scanează coduri QR reale pentru a debloca următoarea parte a poveștii. Descoperă orașul și misterul în același timp." }
+                ]
+            }
+        };
+
+        function updateLanguage() {
+            const lang = languages[currentLangIndex];
+            const t = texts[lang];
+
+            document.getElementById("langButton").textContent = t.langButton;
+            document.querySelector(".hero h2").textContent = t.heroTitle;
+            document.querySelector(".hero p").textContent = t.heroText;
+            document.querySelector(".hero .btn").textContent = t.btn;
+            document.querySelector("#how-it-works h2").textContent = t.howItWorksTitle;
+            document.querySelector("#how-it-works p").textContent = t.howItWorksText;
+            document.querySelector("#features h2").textContent = t.featuresTitle;
+
+            const featureDivs = document.querySelectorAll(".feature");
+            featureDivs.forEach((div, i) => {
+                div.querySelector("h3").textContent = t.features[i].title;
+                div.querySelector("p").textContent = t.features[i].text;
+            });
+
+            currentLangIndex = (currentLangIndex + 1) % languages.length;
+        }
+
+        document.getElementById("langButton").addEventListener("click", updateLanguage);
+    </script>
+
+</body>
+
+</html>
