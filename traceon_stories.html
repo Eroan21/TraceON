@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceON Stories</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1A1A1A;
+            color: #F0F0F0;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #004D61;
+            border-bottom: 2px solid #822659;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #F0F0F0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            margin-left: 25px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #822659;
+        }
+
+        #langButton {
+            margin-left: 20px;
+            padding: 6px 12px;
+            border-radius: 25px;
+            border: none;
+            background-color: #3E5641;
+            color: #F0F0F0;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #langButton:hover {
+            background-color: #822659;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 40vh;
+            background: linear-gradient(135deg, #004D61, #3E5641);
+            border-radius: 0 0 50px 50px;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #F0F0F0;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            color: #F0F0F0;
+        }
+
+        /* Grid of stories */
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .story-card {
+            background: linear-gradient(135deg, #004D61, #3E5641);
+            border-radius: 25px;
+            padding: 15px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .story-card img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            background-color: #3E5641;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .story-card h3 {
+            margin: 10px 0 5px 0;
+            font-size: 1.3em;
+            color: #F0F0F0;
+        }
+
+        .story-card p {
+            font-size: 1em;
+            color: #F0F0F0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004D61;
+            text-align: center;
+            padding: 20px;
+            color: #F0F0F0;
+            border-top: 2px solid #822659;
+        }
+
+        @media(max-width: 768px) {
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            .story-card img {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>TraceON</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#stories">Stories</a>
+            <button id="langButton">🇬🇧 English</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2 id="heroTitle">Start Your Adventure</h2>
+        <p id="heroText">Choose a story below to begin your real-world detective journey.</p>
+    </section>
+
+    <section id="stories" class="story-grid">
+        <div class="story-card" onclick="location.href='story1.html'">
+            <h3 class="storyTitle">Story 1</h3>
+            <img src="" alt="Story 1 image placeholder">
+            <p class="storyDesc">Short description for Story 1.</p>
+        </div>
+        <div class="story-card" onclick="location.href='story2.html'">
+            <h3 class="storyTitle">Story 2</h3>
+            <img src="" alt="Story 2 image placeholder">
+            <p class="storyDesc">Short description for Story 2.</p>
+        </div>
+        <div class="story-card" onclick="location.href='story3.html'">
+            <h3 class="storyTitle">Story 3</h3>
+            <img src="" alt="Story 3 image placeholder">
+            <p class="storyDesc">Short description for Story 3.</p>
+        </div>
+        <div class="story-card" onclick="location.href='story4.html'">
+            <h3 class="storyTitle">Story 4</h3>
+            <img src="" alt="Story 4 image placeholder">
+            <p class="storyDesc">Short description for Story 4.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 TraceON. All rights reserved.
+    </footer>
+
+    <script>
+        const languages = ["en", "hu", "ro"];
+        let currentLangIndex = 0;
+
+        const texts = {
+            en: {
+                langButton: "🇬🇧 English",
+                heroTitle: "Start Your Adventure",
+                heroText: "Choose a story below to begin your real-world detective journey.",
+                stories: [
+                    { title: "Story 1", desc: "Short description for Story 1." },
+                    { title: "Story 2", desc: "Short description for Story 2." },
+                    { title: "Story 3", desc: "Short description for Story 3." },
+                    { title: "Story 4", desc: "Short description for Story 4." }
+                ]
+            },
+            hu: {
+                langButton: "🇭🇺 Hungarian",
+                heroTitle: "Kezd el a Kalandot",
+                heroText: "Válassz egy történetet az alábbiak közül, hogy elkezdhesd a valós világ detektív játékát.",
+                stories: [
+                    { title: "Történet 1", desc: "Rövid leírás az 1. történethez." },
+                    { title: "Történet 2", desc: "Rövid leírás a 2. történethez." },
+                    { title: "Történet 3", desc: "Rövid leírás a 3. történethez." },
+                    { title: "Történet 4", desc: "Rövid leírás a 4. történethez." }
+                ]
+            },
+            ro: {
+                langButton: "🇷🇴 Romanian",
+                heroTitle: "Începe Aventura Ta",
+                heroText: "Alege o poveste de mai jos pentru a începe călătoria ta detectiv în lumea reală.",
+                stories: [
+                    { title: "Povestea 1", desc: "Scurtă descriere pentru Povestea 1." },
+                    { title: "Povestea 2", desc: "Scurtă descriere pentru Povestea 2." },
+                    { title: "Povestea 3", desc: "Scurtă descriere pentru Povestea 3." },
+                    { title: "Povestea 4", desc: "Scurtă descriere pentru Povestea 4." }
+                ]
+            }
+        };
+
+        function updateLanguage() {
+            const lang = languages[currentLangIndex];
+            const t = texts[lang];
+
+            document.getElementById("langButton").textContent = t.langButton;
+            document.getElementById("heroTitle").textContent = t.heroTitle;
+            document.getElementById("heroText").textContent = t.heroText;
+
+            const titles = document.querySelectorAll(".storyTitle");
+            const descs = document.querySelectorAll(".storyDesc");
+            titles.forEach((el, i) => el.textContent = t.stories[i].title);
+            descs.forEach((el, i) => el.textContent = t.stories[i].desc);
+
+            currentLangIndex = (currentLangIndex + 1) % languages.length;
+        }
+
+        document.getElementById("langButton").addEventListener("click", updateLanguage);
+    </script>
+
+</body>
+
+</html>
